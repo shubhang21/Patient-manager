@@ -1,5 +1,17 @@
+html{
+  /* background-image: linear-gradient(to bottom right, rgba(0, 60, 255, 0.747), rgba(182, 82, 15, 0.658)); */
+  height: 100%;
+}
+.body{
+  height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .App {
   text-align: center;
+  
+  
 }
 
 .App-logo {

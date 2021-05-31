@@ -1,0 +1,11 @@
+.side{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.item{
+    width: 100%;
+    margin: 50px;
+}

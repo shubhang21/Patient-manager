@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import React,{useState,useEffect} from 'react';
 import './App.css';
+import Login from './Components/Login.js';
+import Dashboard from'./Components/Dashboard.js'
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
+
+
+
 
 function App() {
+
+  const[token,setToken]=useState(false);
+  useEffect(() => {
+    console.log("Re-render")
+    
+  }, )
+
+  if(!token){
+    return <div className="App" ><Login setToken={setToken} /></div>
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <AppBar position="static">
+  <Toolbar>
+    
+    <Typography variant="h6">
+      Patient Manager
+    </Typography>
+  </Toolbar>
+</AppBar>
+        
+              <Dashboard />
+        
+      
+        
     </div>
   );
 }
